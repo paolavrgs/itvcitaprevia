@@ -1,0 +1,14 @@
+.banner-home {
+  position: relative;
+  @include bg(cover, no-repeat, center);
+  @include size(100%, calc(100vh - 146px));
+  @include flexcenter();
+  flex-direction: column;
+  background-image: url('https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80');
+
+  h1 {
+    color: $white;
+    width: 60%;
+    text-align: center;
+  }
+}

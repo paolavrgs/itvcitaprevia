@@ -1,0 +1,37 @@
+.bg-top.navbar-light
+  .container
+    .row.no-gutters.d-flex.align-items-center.align-items-stretch
+      .col-md-4.d-flex.align-items-center.py-4
+        %a.navbar-brand{ href: "#" }
+          itvcitaprevia.es
+      .col-md-4.d-block
+        .row.d-flex
+          .col-md.d-flex.topper.align-items-center.justify-content-center.py-md-4
+            %form.search-form.order-lg-last{ action: "#" }
+              .form-group.d-flex
+                %input.form-control.pl-3{ placeholder: "Busca tu ITV más cercana", type: "text" }
+                %button.form-control.search{ placeholder: "", type: "submit" }
+                  %span.fa.fa-search
+      .col-md-4.topper.d-flex.align-items-center.justify-content-end
+        %ul.navbar-nav
+          %li.nav-item
+            %a.nav-link{ href: "#" } FAQS
+%nav#itv-navbar.navbar.navbar-expand-lg.itv-navbar
+  .container.d-flex.align-items-center
+    %button.navbar-toggler{"aria-controls" => "itv-nav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#itv-nav", "data-toggle" => "collapse", type: "button"}
+      %span.oi.oi-menu
+      Menu
+    #itv-nav.collapse.navbar-collapse
+      %ul.navbar-nav.mx-auto
+        %li.nav-item.active
+          %a.nav-link.pl-0{ href: "#" } ITV
+        %li.nav-item
+          %a.nav-link{ href: "#" } Periodicidad ITV
+        %li.nav-item
+          %a.nav-link{ href: "#" } Resultado de la ITV
+        %li.nav-item
+          %a.nav-link{ href: "#" } Precios ITV
+        %li.nav-item
+          %a.nav-link{ href: "#" } ITV por Matrícula
+        %li.nav-item
+          %a.nav-link{ href: "#" } Blog

@@ -1,0 +1,43 @@
+= Haml::Engine.new(File.read("app/partials/_head.haml")).render()
+%body
+  = Haml::Engine.new(File.read("app/partials/_navbar.haml")).render()
+  %section.home
+    .banner-home
+      %h1 Facilitamos el proceso de pedir cita previa en la ITV de manera rápida sin esperas, ni filas interminables.
+      .scroll-down-box
+        %a.scroll-down-target{ href:'#' }
+          %span.fa.fa-chevron-down
+  %section.how-it-works.next-section
+    %h1 Cómo funciona ITV?
+    .how-it-works-grid
+      .how-it-works-item
+        %img{src:'assets/img/card-side-2.png'}
+      .how-it-works-item
+        %p Reserva tu cita online o bien llama por teléfono a la estación ITV que más te interese por cercanía o precio.
+        %p Para obtener una cita previa simplemente necesitarás unos determinados datos dependiendo de la empresa que gestione la estación de Inspección Técnica de Vehículos y el sistema de citas que utilice.
+        %p Lo más habitual es la matrícula y una dirección de correo electrónico. Pero en algunos casos te requerirán un número de teléfono y como pasar en Andalucía, el número de bastidor.
+        %a.btn.btn-template{ href:'#' } Pide tu Cita Previa ITV
+  %section.blog
+    %h1 Blog
+    .row
+      .col-lg-4
+        .blog-entry
+          %a.block-20.d-flex.align-items-end{href: "#", style: "background-image: url('https://images.unsplash.com/photo-1567113463730-77e3df20363c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');"}
+            .meta-date.text-center.p-2
+              %span.day 26
+              %span.mos June
+              %span.yr 2019
+          .text.bg-white.p-4
+            %h3.heading
+              %a{href: "#"} Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            .d-flex.align-items-center.mt-4
+              %p.mb-0
+                %a.btn.btn-template.btn-small{href: "#"}
+                  Read More
+                  %span.fa.fa-chevron-right
+              %p.ml-auto.mb-0
+                %a.mr-2{href: "#"} Admin
+  
+= Haml::Engine.new(File.read("app/partials/_footer.haml")).render()
+= Haml::Engine.new(File.read("app/partials/_scripts.haml")).render()

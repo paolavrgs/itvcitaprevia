@@ -1,0 +1,149 @@
+@import 'bourbon';
+@import 'mixins';
+@import 'variables';
+
+body {
+  font-family: $font;
+}
+
+@import 'navbar';
+@import 'banner';
+
+.scroll-down-box {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down-box a {
+  padding-top: 70px;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+.scroll-down-box a span {
+  color: $white;
+  font-size: 25px;
+  animation: sdb05 1.5s infinite;
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.btn-template {
+  background-color: $primary;
+  color: $dark;
+  font-weight: 700;
+  border-radius: 3px;
+  padding: 12px 24px;
+}
+
+.how-it-works {
+  padding: 50px;
+
+  h1 {
+    color: $dark;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  img {
+    width: 100%;
+    margin-left: -50px;
+  }
+}
+
+//BLOG ENTRY
+.blog {
+  padding: 0 50px;
+}
+.block-20 {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 275px;
+  position: relative;
+  display: block;
+}
+.blog-entry{
+  width: 100%;
+  border: 4px solid lighten($primary,40%);
+  @include respond-to(md){
+    margin-bottom: 30px;
+  }
+  @include respond-to(sm){
+    margin-bottom: 30px;
+  }
+  .text {
+    position: relative;
+    border-top: 0;
+    border-radius: 2px;
+    .heading {
+      font-size: 20px;
+      margin-bottom: 16px;
+      a {
+        color: $black;
+        &:hover, &:focus, &:active {
+          color: $primary;
+        }
+      }
+    }
+    .meta-chat{
+      color: lighten($black, 70%);
+    }
+    .read{
+      color: $black;
+      font-size: 14px;
+    }
+  }
+  .meta-date{
+    display: inline-block;
+    background: $primary;
+    span{
+      display: block;
+      color:$white;
+    }
+    .day{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .mos,.yr{
+      font-size: 13px;
+    }
+  }
+  .meta {
+    > div {
+      display: block;
+      margin-right: 5px;
+      margin-bottom: 0px;
+      font-size: 15px;
+      a {
+        color: lighten($black, 70%);
+        font-size: 13px;
+        &:hover {
+          color: lighten($black, 80%);
+        }
+      }
+    }
+  }
+}
