@@ -1,0 +1,22 @@
+.top-bottom-line {
+  position: relative;
+  &::before {
+    @include pseudo();
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: #D9E0F0;
+    top: 5px;
+    left: 0;
+  }
+
+  &::after {
+    @include pseudo();
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: #D9E0F0;
+    left: 0;
+    bottom: 5px;
+  }
+}

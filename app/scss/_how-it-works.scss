@@ -1,0 +1,28 @@
+.how-it-works {
+  padding: 50px;
+  @include respond-to(xs) {
+    padding: 50px 10px;
+  }
+
+  h1 {
+    color: $dark;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .how-it-works-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .how-it-works-img {
+    width: 100%;
+    margin-left: -50px;
+    @include respond-to(xs) {
+      margin-left: -10px;
+    }
+  }
+}

@@ -6,144 +6,77 @@ body {
   font-family: $font;
 }
 
-@import 'navbar';
-@import 'banner';
-
-.scroll-down-box {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+a {
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.scroll-down-box a {
-  padding-top: 70px;
+.title {
   position: relative;
-  &:focus {
-    outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  display: table;
+  @include respond-to(xs) {
+    font-size: 25px;
+  }
+
+  &::before {
+    @include pseudo();
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50%;
+    background: $primary;
+    transition: inherit;
+    z-index: -1;
   }
 }
 
-.scroll-down-box a span {
-  color: $white;
-  font-size: 25px;
-  animation: sdb05 1.5s infinite;
-}
 
-@keyframes sdb05 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(20px);
-    opacity: 0;
+h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: $primary;
+  @include respond-to(xs) {
+    font-size: 25px;
   }
 }
 
 .btn-template {
   background-color: $primary;
-  color: $dark;
+  color: $white;
   font-weight: 700;
   border-radius: 3px;
   padding: 12px 24px;
-}
 
-.how-it-works {
-  padding: 50px;
-
-  h1 {
-    color: $dark;
-    text-align: center;
-    margin-bottom: 50px;
+  &.shadow {
+    box-shadow: 0 16px 32px rgba(43, 43, 82, 0.24);
   }
 }
 
-.how-it-works-grid {
+.column-2-grid {
   display: grid;
   grid-template-columns: 50% 50%;
-
-  img {
-    width: 100%;
-    margin-left: -50px;
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
   }
 }
 
-//BLOG ENTRY
-.blog {
-  padding: 0 50px;
-}
-.block-20 {
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 275px;
-  position: relative;
-  display: block;
-}
-.blog-entry{
-  width: 100%;
-  border: 4px solid lighten($primary,40%);
-  @include respond-to(md){
-    margin-bottom: 30px;
-  }
-  @include respond-to(sm){
-    margin-bottom: 30px;
-  }
-  .text {
-    position: relative;
-    border-top: 0;
-    border-radius: 2px;
-    .heading {
-      font-size: 20px;
-      margin-bottom: 16px;
-      a {
-        color: $black;
-        &:hover, &:focus, &:active {
-          color: $primary;
-        }
-      }
-    }
-    .meta-chat{
-      color: lighten($black, 70%);
-    }
-    .read{
-      color: $black;
-      font-size: 14px;
-    }
-  }
-  .meta-date{
-    display: inline-block;
-    background: $primary;
-    span{
-      display: block;
-      color:$white;
-    }
-    .day{
-      font-weight: 700;
-      font-size: 20px;
-    }
-    .mos,.yr{
-      font-size: 13px;
-    }
-  }
-  .meta {
-    > div {
-      display: block;
-      margin-right: 5px;
-      margin-bottom: 0px;
-      font-size: 15px;
-      a {
-        color: lighten($black, 70%);
-        font-size: 13px;
-        &:hover {
-          color: lighten($black, 80%);
-        }
-      }
-    }
+.order-2 {
+  order: 2;
+  @include respond-to(xs) {
+    order: unset;
   }
 }
+
+@import 'decoration';
+@import 'navbar';
+@import 'banner';
+@import 'how-it-works';
+@import 'features';
+@import 'blog';
+@import 'footer';

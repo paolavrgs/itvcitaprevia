@@ -1,20 +1,11 @@
 .itv-navbar {
-  background: #0d1128;
+  background: $primary;
   z-index: 3;
   padding: 0;
   @include respond-to(md) {
     position: relative;
     top: 0;
     padding: 10px 15px;
-  }
-  .navbar-brand {
-    color: $white;
-    &:hover, &:focus{
-      color: $white;
-    }
-    @include respond-to(md){
-      color: $white;
-    }
   }
 
   .navbar-nav {
@@ -28,9 +19,9 @@
         padding-bottom: 1.2rem;
         padding-left: 20px;
         padding-right: 20px;
-        font-weight: 400;
-        color: $white;
-        // text-transform: uppercase;
+        font-weight: 500;
+        color: $dark;
+
         &:hover {
           color: $white;
         }
@@ -62,47 +53,9 @@
         }
       }
 
-      
-      &.ftco-seperator {
-        position: relative;
-        margin-left: 20px;
-        padding-left: 20px;
-        @include respond-to(md) {
-          padding-left: 0;
-          margin-left: 0;
-        }
-        &:before {
-          position: absolute;
-          content: "";
-          top: 10px;
-          bottom: 10px;
-          left: 0;
-          width: 2px;
-          background: rgba($white, .05);
-          @include respond-to(md) {
-            display: none;
-          }
-        }
-      }
-      &.cta {
-        > a {
-          color: $black;
-          @include respond-to(sm){
-            padding-left: 15px;
-            padding-right: 15px;
-          }
-          @include respond-to(md){
-            color: $white;
-            background: $primary;
-          }
-        }
-      }
       &.active {
         > a {
-          color: $primary;
-          @include respond-to(md){
-            color: $white;
-          }
+          color: $dark;
         }
       }
     }
@@ -120,85 +73,6 @@
       outline: none;
     }
   }
-  
-  &.scrolled  {
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin-top: -130px;
-    background: $white;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
-    .nav-item {
-      &.active {
-        > a {
-          color: $primary;
-        }
-      }
-      &.cta {
-        > a {
-          color: $white;
-          background: $primary;
-          border: none;
-           
-          span {
-            display: inline-block;
-            color: $white;
-          }
-        }
-        &.cta-colored {
-          span {
-            border-color: $primary;
-          }
-        }
-      }
-    }
-
-    .navbar-nav {
-      @include respond-to(md) {
-        background: none;
-        border-radius: 0px;
-        padding-left: 0rem;
-        padding-right: 0rem;
-      }
-    }
-
-    .navbar-nav {
-      @include respond-to(sm) {
-        background: none;
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-
-    .navbar-toggler {
-      border: none;
-      color: rgba(0,0,0,.5);
-      border-color: rgba(0,0,0,.5);
-      cursor: pointer;
-      padding-right: 0;
-      text-transform: uppercase;
-      font-size: 16px;
-      letter-spacing: .1em;
-
-    }
-    .nav-link {
-      padding-top: .9rem;
-      padding-bottom: .9rem;
-      color: $black;
-    }
-    &.awake {
-      margin-top: 0px;
-      transition: .3s all ease-out;
-    }
-    &.sleep {
-      transition: .3s all ease-out;	
-    }
-
-    .navbar-brand {
-      color: $black;
-    }
-  }
 }
 
 .navbar-brand {
@@ -206,6 +80,7 @@
   font-size: 25px;
   padding: 0;
   line-height: 1;
+  color: $dark;
 }
 
 .search-form{

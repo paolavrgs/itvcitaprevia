@@ -1,0 +1,50 @@
+.features {
+  padding: 50px;
+  @include respond-to(xs) {
+    padding: 50px 10px;
+  }
+
+  .feature-item-img {
+    img{ 
+      box-shadow: 0 16px 32px rgba(43,43,82,0.24);
+      @include respond-to(xs) {
+        height: 60vw;
+      }
+    }
+  }
+
+  .feature-item, .feature-item-img {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 50px;
+  @include respond-to(xs) {
+    padding: 50px 10px;
+    grid-template-columns: 100%;
+  }
+
+  .cta-title {
+    font-weight: 700;
+    font-size: 20px;
+    @include respond-to(xs) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .cta-item {
+    display: flex;
+    align-items: center;
+
+    form {
+      width: 100%;
+    }
+  }
+}

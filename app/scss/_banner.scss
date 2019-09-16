@@ -5,10 +5,52 @@
   @include flexcenter();
   flex-direction: column;
   background-image: url('https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80');
+  @include respond-to(xs) {
+    padding: 0 20px;
+  }
 
   h1 {
     color: $white;
     width: 60%;
     text-align: center;
+    @include respond-to(xs) {
+      width: 100%;
+      font-size: 28px;
+    }
+  }
+}
+
+.scroll-down-box {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down-box a {
+  padding-top: 70px;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+.scroll-down-box a span {
+  color: $white;
+  font-size: 25px;
+  animation: sdb05 1.5s infinite;
+}
+
+@keyframes sdb05 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
   }
 }

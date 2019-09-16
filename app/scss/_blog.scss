@@ -1,0 +1,82 @@
+.blog {
+  padding: 50px;
+  @include respond-to(xs) {
+    padding: 50px 10px;
+  }
+}
+.block-20 {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 275px;
+  position: relative;
+  display: block;
+}
+.blog-entry{
+  width: 100%;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.09);
+
+  @include respond-to(md){
+    margin-bottom: 30px;
+  }
+  @include respond-to(sm){
+    margin-bottom: 30px;
+  }
+  @include respond-to(xs){
+    margin-bottom: 30px;
+  }
+  .text {
+    position: relative;
+    border-top: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    .heading {
+      font-size: 18px;
+      margin-bottom: 16px;
+      a {
+        color: $black;
+        &:hover, &:focus, &:active {
+          color: $primary;
+        }
+      }
+    }
+    .meta-chat{
+      color: lighten($black, 70%);
+    }
+    .read{
+      color: $black;
+      font-size: 14px;
+    }
+  }
+  .meta-date{
+    display: inline-block;
+    background: $primary;
+    span{
+      display: block;
+      color:$white;
+    }
+    .day{
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .mos,.yr{
+      font-size: 13px;
+    }
+  }
+  .meta {
+    > div {
+      display: block;
+      margin-right: 5px;
+      margin-bottom: 0px;
+      font-size: 15px;
+      a {
+        color: lighten($black, 70%);
+        font-size: 13px;
+        &:hover {
+          color: lighten($black, 80%);
+        }
+      }
+    }
+  }
+}
